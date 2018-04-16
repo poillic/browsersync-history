@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test history</title>
+</head>
+<body>
+	<a href="/prout">Go to foo</a>
+<script type="text/javascript">
+	var a = document.querySelector( 'a' );
+
+	a.addEventListener('click', function( e ){
+		e.preventDefault();
+		console.log("ta");
+		history.pushState(null, null, '/foo');
+	});
+</script>
+</body>
+</html>
